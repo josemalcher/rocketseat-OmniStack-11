@@ -587,3 +587,5 @@ lint/tmp/
 .history
 
 # End of https://www.gitignore.io/api/node,react,phpunit,phpstorm,reactnative,phpstorm+iml,phpstorm+all,visualstudiocode
+
+aula1/backend/knexfile.js

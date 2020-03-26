@@ -96,7 +96,113 @@ npm start
 
 ## <a name="parte2">2 - 24/03 - Criando a base da aplicação</a>
 
+- Node.js & Express
+  - Rotas e recursos
+  - Métodos HTTP
+  - Tipos de Parâmetros
+- Utilizando o Insomnia
 
+```
+/*
+*   Rota / Recuso
+*   app.get('/users', (request, response)=> {});
+*/
+
+/*
+* Método HTTP
+*
+* GET: Buscauma informação do Back-end
+* POST: Criar uma informação no back-end
+* PUT: Alterar
+* DELETE: Deletar
+*
+*/
+
+/*
+*   Tipos de Parâmetros
+*
+*  Query Params: Parâmetros nomeados enviados na rota após "?" (Filtros, paginação)
+*  Route Params: Parâmetros utilizados para identificar recursos
+*  Request Body: Corpo da requisição, utilizado para criar ou alterar recursos
+*
+* */
+
+```
+
+- Configurando Nodemon
+
+```
+npm install nodemon -D
+
+```
+
+```
+// aula1/backend/package.json
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+```
+
+```
+npm start
+
+> nodemon index.js
+
+[nodemon] 2.0.2
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching dir(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node index.js`
+
+```
+
+- Diferenças entre banco de dados
+- Configurando Banco de dados
+
+```
+/*
+*  SQL: MySQL, SQLite, PostgreSQL, Oracle, M. SQL Server
+*  NoSQL: MOngoDB, CouchDB, etc.
+*/
+
+/*
+* Driver: SELECT * FROM users
+* Query Builder: table('users').select('*').where()
+* - http://knexjs.org/
+*   npm install knex --save
+* 
+*/
+
+```
+
+```
+npx knex init
+Created ./knexfile.js
+
+```
+
+```
+// aula1/backend/knexfile.js
+
+  development: {
+    client: 'sqlite3',
+    connection: {
+      filename: './src/database/db.sqlite'
+    }
+  },
+```
+
+
+- Pensando nas entidades e funcionalidades
+- Construção do back-end
+- Adicionando módulo CORS
+- Enviando Back-end ao Github
 
 [Voltar ao Índice](#indice)
 

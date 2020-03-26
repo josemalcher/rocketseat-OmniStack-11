@@ -1,8 +1,8 @@
 const express = require('express');
 
-const app = express();
+const routes = express.Router();
 
-app.get('/', (request, response)=> {
+routes.get('/users', (request, response)=> {
     //response.send("Olá Mundo!!");
     response.json({
         evento: "OmniStak 11",
@@ -10,4 +10,4 @@ app.get('/', (request, response)=> {
     })
 });
 
-app.listen(3333);
+module.exports = routes;

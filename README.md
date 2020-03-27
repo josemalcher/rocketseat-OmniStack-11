@@ -200,6 +200,80 @@ Created ./knexfile.js
 
 
 - Pensando nas entidades e funcionalidades
+  - Entidades
+    - ONG
+    - Caso (incident)
+  - Funcionalidades
+    - Login de ONG
+    - Logout de ONG
+    - Cadastro de ONG
+    - Cadastrar novos casos
+    - Deletar novos casos
+    - Listar casos específicos de uma ONG
+    - Listar todos os casos
+    - Entrar em contato com a ONG
+
+- Criando as Migrations
+
+```
+npx knex migrate:make create_ongs
+```
+
+- aula1/backend/src/database/migration/20200326224632_create_ongs.js
+
+```js
+
+exports.up = function(knex) {
+  return knex.schema.createTable('ongs', function (table) {
+        table.string('id').primary();
+        table.string('name').notNullable();
+        table.string('email').notNullable();
+        table.string('whatsapp').notNullable();
+        table.string('city').notNullable();
+        table.string('uf',2).notNullable();
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('ongs');
+};
+
+
+```
+
+```
+npx knex migrate:latest
+```
+
+```
+npx knex migrate:make create_incidents
+
+```
+
+- aula1/backend/src/database/migration/20200326232413_create_incidents.js
+
+```js
+
+exports.up = function(knex) {
+    return knex.schema.createTable('indidents', function (table) {
+        table.increments();
+
+        table.string('title').notNullable();
+        table.string('description').notNullable();
+        table.decimal('value').notNullable();
+
+        table.string('ong_id').notNullable();
+        table.foreign('ong_id').references('id').inTable('ong');
+    });
+};
+
+exports.down = function(knex) {
+    return knex.schema.dropTable('indidents');
+};
+
+```
+
+
 - Construção do back-end
 - Adicionando módulo CORS
 - Enviando Back-end ao Github

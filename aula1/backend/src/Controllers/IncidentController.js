@@ -3,10 +3,17 @@ const connection = require('../database/connection');
 module.exports = {
     async index(request, response){
         const { page = 1 } = request.query;
+
+        //verificar o tamanho dos objetos
+        const [count] = await connection('indidents').count();
+
         const incidents = await connection('indidents')
             .limit(5)
             .offset((page - 1) * 5)
             .select('*');
+
+        response.header('X-Total-Count', count['count(*)']);
+
         return response.json(incidents);
     },
 

@@ -1,9 +1,11 @@
 import React from 'react';
+import Header from "./Header";
 
 function App() {
-  return (
-      <h1>Olá Mundo</h1>
-  );
+    return (
+        //<Header title="Semana OmnisStack"/>
+        <Header>Semana Omnistack</Header>
+    );
 }
 
 export default App;

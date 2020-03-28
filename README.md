@@ -275,8 +275,18 @@ exports.down = function(knex) {
 
 
 - Construção do back-end
+  - aula1/backend/src/Controllers/IncidentController.js
+  - aula1/backend/src/Controllers/OngContrller.js
+  - aula1/backend/src/Controllers/profileController.js
+  - aula1/backend/src/Controllers/SessionController.js
+
 - Adicionando módulo CORS
-- Enviando Back-end ao Github
+
+```
+npm install cors
+```
+
+- Enviando Back-end ao Github - ok 
 
 [Voltar ao Índice](#indice)
 

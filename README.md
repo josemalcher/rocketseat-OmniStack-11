@@ -295,7 +295,19 @@ npm install cors
 
 ## <a name="parte3">3 - 25/03- Construindo a interface web</a>
 
-
+- Limpando Estrutura
+- Conceitos do REACT
+  - COmponentes
+  - JSX
+  - Propriedades
+  - Estado
+  - Imutabilidade
+- Página de Login
+- Configurando Rotas
+- Cadastro de ONG's
+- Listagem de Casos
+- Conectando aplicações à API
+- Enviar projeto Github
 
 [Voltar ao Índice](#indice)
 

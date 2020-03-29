@@ -303,7 +303,18 @@ npm install cors
   - Estado
   - Imutabilidade
 - Página de Login
+
+```
+    npm install react-icon
+
+```
+
 - Configurando Rotas
+
+```
+    npm install react-router-dom
+```
+
 - Cadastro de ONG's
 - Listagem de Casos
 - Conectando aplicações à API
